@@ -56,6 +56,7 @@ def search_project(query: str, path: str = ".") -> str:
     """
     # Using grep -rn to show line numbers and recursive
     # Excluding .git, __pycache__, and other common ignore dirs
+    # Use 'path' as the location for grep to start
     cmd = f"grep -rn \"{query}\" {path} --exclude-dir=.git --exclude-dir=__pycache__ --exclude-dir=.koval_worktrees"
     stdout, stderr, code = run_shell(cmd)
     if code == 0:

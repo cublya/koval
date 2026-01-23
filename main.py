@@ -19,9 +19,12 @@ def swarm(task: str):
     """
     Start the Multi-Agent Swarm for a complex task.
     """
-    typer.echo(f"Starting Swarm for task: {task}")
-    # run_swarm(task)
-    typer.echo("Swarm mode not yet implemented.")
+    try:
+        from apps.swarm.pipeline import SwarmPipeline
+        pipeline = SwarmPipeline()
+        pipeline.run(task)
+    except Exception as e:
+        typer.echo(f"Swarm Error: {str(e)}")
 
 if __name__ == "__main__":
     app()
