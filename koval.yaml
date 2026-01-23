@@ -1,0 +1,23 @@
+system:
+  max_workers: 4
+  default_model: "gpt-4o"
+
+models:
+  gpt-4o:
+    provider: "openai"
+    model_name: "gpt-4o"
+  claude-3.5:
+    provider: "anthropic"
+    model_name: "claude-3-5-sonnet-20240620"
+  gemini-1.5:
+    provider: "vertex_ai"
+    model_name: "gemini-1.5-pro"
+  ollama:
+    provider: "ollama"
+    model_name: "llama3"
+
+drivers:
+  opencode:
+    path: "opencode"  # Assumes in PATH
+  gemini:
+    path: "gemini"    # Assumes in PATH
