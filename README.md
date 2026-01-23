@@ -12,7 +12,7 @@ Koval is a developer tool for building and running agentic workflows locally.
 Koval is **source-available** under the **Apache License 2.0** with the
 **Koval Non-Commercial Addendum**. See `LICENSE.md`.
 
-For commercial licensing, contact the project owner.
+For commercial licensing, contact the project owner. (hikmat@cublya.com) 
 
 ## Contributing
 
