@@ -31,3 +31,4 @@ licensed under the same terms as the rest of the project.
 ## Security
 
 If you discover a security issue, please report it privately (do not open a public issue).
+(contact: hikmat@cublya.com)
