@@ -7,10 +7,8 @@ class QwenDriver(Driver):
     https://github.com/QwenLM/qwen-code
     """
     def run(self, task: str, path: str = ".") -> str:
-        # Assuming a `qwen-cli` or similar exists.
-        # This is speculative based on common patterns as I cannot install it.
-
-        cmd = ["qwen-cli", "run", "--prompt", task]
+        # Qwen Code is a fork of Gemini CLI, so likely uses -p for prompt
+        cmd = ["qwen", "-p", task]
 
         try:
             result = subprocess.run(

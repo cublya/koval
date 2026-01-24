@@ -7,9 +7,11 @@ class CopilotDriver(Driver):
     https://github.com/github/copilot-cli
     """
     def run(self, task: str, path: str = ".") -> str:
-        # Copilot CLI usage: `gh copilot suggest "task"` or `gh copilot explain`
-        # It is interactive by default.
-        # For headless, we might need specific flags or piping.
+        # Try `gh copilot suggest` which is the standard CLI extension.
+        # It's interactive, so for headless we try to just get the suggestion.
+        # -t shell might be limiting, but -t generic isn't always available.
+        # For an "agent" behavior, `copilot` binary is cleaner but less common.
+        # We will default to `gh copilot suggest`.
 
         cmd = ["gh", "copilot", "suggest", "-t", "shell", task]
 

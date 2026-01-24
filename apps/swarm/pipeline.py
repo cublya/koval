@@ -32,8 +32,10 @@ class SwarmPipeline:
             worktree_path = self.factory.create_worktree(task)
 
             # 2. Get Driver
-            # In the future, planner can suggest driver type
-            driver = get_driver(DriverType.NATIVE, config={"model": self.planner.model})
+            # We determine the driver from config, allowing the user to choose the backend tool.
+            # Default to Native (LiteLLM) if not specified.
+            driver_name = self.config.get("system", {}).get("driver", DriverType.NATIVE)
+            driver = get_driver(driver_name, config={"model": self.planner.model})
 
             # 3. Work Loop (Code -> Review -> Fix)
             current_request = task

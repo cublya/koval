@@ -1,6 +1,7 @@
 system:
   max_workers: 4
   default_model: "gpt-4o"
+  driver: "native" # Options: native, opencode, gemini, claude, codex, qwen, copilot
 
 models:
   gpt-4o:
