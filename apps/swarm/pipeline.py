@@ -7,6 +7,7 @@ from apps.swarm.factory import WorktreeFactory
 from libs.drivers import get_driver
 from libs.core.config import load_config
 from libs.core.reviewer import Reviewer
+from libs.core.enums import DriverType
 
 class SwarmPipeline:
     def __init__(self, config_path: str = "koval.yaml"):
@@ -31,7 +32,8 @@ class SwarmPipeline:
             worktree_path = self.factory.create_worktree(task)
 
             # 2. Get Driver
-            driver = get_driver("native", config={"model": self.planner.model})
+            # In the future, planner can suggest driver type
+            driver = get_driver(DriverType.NATIVE, config={"model": self.planner.model})
 
             # 3. Work Loop (Code -> Review -> Fix)
             current_request = task

@@ -6,18 +6,18 @@ import os
 
 class OpenCodeDriver(Driver):
     def run(self, task: str, path: str = ".") -> str:
+        # Check if we are in headless mode (e.g. Swarm) vs Interactive
+        # If is_interactive is True, we launch terminal.
+        # But if Swarm calls this, it expects a result string.
+        # OpenCode CLI might have a non-interactive mode?
+        # Assuming `opencode start --headless` or similar exists for CI/CD.
+        # If not, we fall back to launching it and returning a message.
+
         cmd = ["opencode", "start", "--dir", path, "--task", task]
 
-        # In a real scenario, we might want to launch a new terminal window.
-        # For now, we'll try to run it in the current process if possible,
-        # or simulate the launch command.
-
-        # Note: Launching a TUI inside a subprocess without a TTY is tricky.
-        # If this driver is running in a background worker (Swarm), it might fail to open a UI.
-        # We will assume this is being run in a context where we can spawn a terminal or
-        # just print the command for now if we are headless.
-
-        # But per requirements: "Launches the tool in a new terminal tab/pane and waits for user exit."
+        # NOTE: For Swarm, ideally we want to capture output.
+        # If the user strictly wants to "connect to these clis", launching them is correct.
+        # But for "giving instructions", passing --task is correct.
 
         system = platform.system()
         full_cmd = " ".join(shlex.quote(c) for c in cmd)

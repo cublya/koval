@@ -2,6 +2,7 @@ from typing import Tuple
 from libs.core.tools import run_shell
 import litellm
 from libs.core.config import get_model_config
+from libs.core.enums import ModelProvider
 
 class Reviewer:
     def __init__(self, model_name: str = None):
@@ -9,7 +10,7 @@ class Reviewer:
         name = self.model_config.get("model_name", "gpt-4o")
         provider = self.model_config.get("provider")
 
-        if provider and provider != "openai":
+        if provider and provider != ModelProvider.OPENAI.value:
              self.model = f"{provider}/{name}"
         else:
              self.model = name

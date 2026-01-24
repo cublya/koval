@@ -3,6 +3,7 @@ import litellm
 from typing import List, Dict, Any, Optional
 from libs.core.config import get_model_config
 from libs.core.tools import read_file_with_lines, search_project, edit_file_patch, run_shell
+from libs.core.enums import ModelProvider
 
 class Agent:
     def __init__(self, model_name: str = None):
@@ -10,7 +11,7 @@ class Agent:
         name = self.model_config.get("model_name", "gpt-4o")
         provider = self.model_config.get("provider")
 
-        if provider and provider != "openai": # OpenAI is default for many names, but explicitly:
+        if provider and provider != ModelProvider.OPENAI.value:
              # LiteLLM format: provider/model_name (e.g. ollama/llama3)
              self.model = f"{provider}/{name}"
         else:
