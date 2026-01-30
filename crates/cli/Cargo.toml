@@ -1,0 +1,18 @@
+[package]
+name = "koval-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+koval-core.workspace = true
+koval-tui.workspace = true
+koval-common.workspace = true
+koval-tools.workspace = true
+koval-protocol.workspace = true
+
+clap.workspace = true
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

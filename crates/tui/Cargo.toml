@@ -1,0 +1,16 @@
+[package]
+name = "koval-tui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+koval-core.workspace = true
+koval-protocol.workspace = true
+koval-common.workspace = true
+
+ratatui.workspace = true
+crossterm.workspace = true
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true

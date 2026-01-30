@@ -1,0 +1,43 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/cli",
+    "crates/core",
+    "crates/tui",
+    "crates/tools",
+    "crates/protocol",
+    "crates/common",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Koval Team"]
+license = "MIT"
+
+[workspace.dependencies]
+# Internal Crates
+koval-core = { path = "crates/core" }
+koval-tui = { path = "crates/tui" }
+koval-tools = { path = "crates/tools" }
+koval-protocol = { path = "crates/protocol" }
+koval-common = { path = "crates/common" }
+
+# External Dependencies
+tokio = { version = "1.36", features = ["full"] }
+anyhow = "1.0"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+clap = { version = "4.5", features = ["derive", "env"] }
+reqwest = { version = "0.11", features = ["json", "stream"] }
+ratatui = "0.26"
+crossterm = "0.27"
+async-trait = "0.1"
+futures = "0.3"
+config = "0.14"
+directories = "5.0"
+uuid = { version = "1.7", features = ["v4", "serde"] }
+schemars = "0.8"

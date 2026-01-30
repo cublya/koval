@@ -2,10 +2,54 @@
 
 Koval is a developer tool for building and running agentic workflows locally.
 
+**Rewrite (Jan 2026):** Koval has been completely rewritten in Rust for performance, type safety, and stability, superseding the legacy Python version.
+
 ## Why Koval
 - Local-first workflow (privacy-friendly)
 - Branch-per-agent / parallel work style
 - Minimal UX, automation-focused
+- **Rust Native**: High performance, single binary distribution.
+- **Swarm Mode**: Autonomous planning and execution with review loops.
+
+## Getting Started
+
+### Prerequisites
+- Rust Toolchain (`cargo`, `rustc`)
+- LiteLLM Proxy (recommended, running on `http://localhost:4000`) or any OpenAI-compatible API.
+
+### Installation
+```bash
+# Build the project
+cargo build --release
+```
+
+### Usage
+Run the CLI interactive mode:
+```bash
+./target/release/koval-cli
+# OR
+cargo run -- cli
+```
+
+Start a Swarm task:
+```bash
+./target/release/koval-cli swarm "Refactor the authentication module"
+# OR
+cargo run -- swarm "Refactor the authentication module"
+```
+
+## Configuration
+Koval is configured via `~/.config/koval/config.toml` or Environment Variables.
+
+**Defaults:**
+- Base URL: `http://localhost:4000/v1`
+- API Key: `sk-1234`
+- Model: `gpt-4o`
+
+**Environment Overrides:**
+- `KOVAL_OPENAI_BASE_URL`
+- `KOVAL_OPENAI_API_KEY`
+- `KOVAL_MODEL`
 
 ## License
 
