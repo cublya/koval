@@ -2,7 +2,7 @@
 
 Koval is a developer tool for building and running agentic workflows locally.
 
-**Rewrite (Jan 2026):** Koval has been completely rewritten in Rust for performance, type safety, and stability, superseding the legacy Python version.
+Note: This project is under active-development.
 
 ## Why Koval
 - Local-first workflow (privacy-friendly)
