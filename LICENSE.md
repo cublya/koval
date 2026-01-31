@@ -1,4 +1,3 @@
-
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -200,3 +199,66 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+----------------------------------------------------------------
+Project Boilerplate Notice (Apache 2.0 + Koval Addendum)
+----------------------------------------------------------------
+
+Copyright 2026 Hikmat Samadov
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License
+and the Koval Non-Commercial Addendum.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License (as modified by the Koval Non-Commercial
+Addendum) is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied.
+See the License and the Addendum for the specific language governing
+permissions and limitations under the License.
+
+----------------------------------------------------------------
+Koval Non-Commercial Addendum
+----------------------------------------------------------------
+
+Copyright (c) 2026 Hikmat Samadov
+
+The following additional terms apply and override any conflicting terms
+of the Apache License 2.0.
+
+1. Permitted Use
+   - The Work may be used, modified, and run locally for personal,
+     educational, or internal organizational purposes.
+   - Forks, issues, and pull requests are permitted.
+
+2. Attribution
+   - Any redistribution of the Work or Derivative Works must retain this
+     License text (including this Addendum) and clearly attribute the
+     original author and the original repository.
+   - You may not claim the Work, its source code, or its core idea as your
+     own original work.
+
+3. Commercial Use Restriction
+   - You may NOT use the Work or Derivative Works to provide, operate, or
+     make available a commercial product or service for third parties,
+     including (but not limited to) any paid or monetized offering such as
+     SaaS, hosted services, cloud services, APIs, or managed offerings,
+     without explicit written permission from the copyright holder.
+   - For clarity, charging a fee for access to the functionality of the
+     Work (directly or indirectly) is considered commercial use.
+
+4. Redistribution Restrictions
+   - You may not rebrand, resell, or distribute the Work or Derivative
+     Works as a competing product or service without explicit written
+     permission from the copyright holder.
+   - You may not remove or alter copyright or license notices.
+
+5. Commercial Licensing
+   - Commercial use requires a separate commercial license.
+   - Contact the project owner to obtain permission.
+
+This Addendum is part of the License and applies to all files in this
+repository unless explicitly stated otherwise.
